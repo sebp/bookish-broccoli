@@ -82,8 +82,9 @@ ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
-RUN mkdir -p "/home/${NB_USER}/.jupyter/lab/user-settings"
-COPY user-settings /home/${NB_USER}/.jupyter/lab/user-settings/
+RUN mkdir -p "/home/${NB_USER}/.jupyter/lab/user-settings" && \
+    fix-permissions "/home/${NB_USER}/.jupyter/lab/user-settings"
+COPY --chown="${NB_UID}:${NB_GID}" user-settings /home/${NB_USER}/.jupyter/lab/user-settings/
 
 USER root
 
