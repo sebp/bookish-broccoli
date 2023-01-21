@@ -64,6 +64,7 @@ RUN mamba install --quiet --yes \
     'scipy' \
     'seaborn' \
     'statsmodels' \
+    'theme-darcula' \
     'widgetsnbextension'\
     'yapf' \
     'xlrd' && \
