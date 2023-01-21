@@ -110,6 +110,7 @@ RUN mamba install --quiet --yes \
     'r-htmltools' \
     'r-htmlwidgets' \
     'r-irkernel' \
+    'r-languageserver' \
     'r-ranger' \
     'r-reshape2' \
     'r-rcolorbrewer' \
