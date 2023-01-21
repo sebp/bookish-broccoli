@@ -32,6 +32,7 @@ RUN mamba install --quiet --yes \
     'black' \
     'bokeh' \
     'bottleneck' \
+    'category_encoders' \
     'cloudpickle' \
     'conda-forge::blas=*=openblas' \
     'cython' \
