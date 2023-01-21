@@ -53,6 +53,7 @@ RUN mamba install --quiet --yes \
     'numexpr' \
     'openpyxl' \
     'pandas' \
+    'pandas-profiling' \
     'patsy' \
     'protobuf' \
     'pyflakes' \
