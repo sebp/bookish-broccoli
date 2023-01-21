@@ -82,6 +82,8 @@ ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
+USER root
+
 # R pre-requisites
 RUN apt-get update --yes && \
     apt-get install --yes --no-install-recommends \
@@ -89,6 +91,8 @@ RUN apt-get update --yes && \
     gfortran \
     gcc && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+USER ${NB_UID}
 
 # R packages including IRKernel which gets installed globally.
 # r-e1071: dependency of the caret R package
@@ -121,7 +125,5 @@ RUN mamba install --quiet --yes \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
-
-USER ${NB_UID}
 
 WORKDIR "${HOME}"
