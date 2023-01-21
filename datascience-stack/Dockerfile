@@ -37,6 +37,7 @@ RUN mamba install --quiet --yes \
     'cython' \
     'dataprep' \
     'dill' \
+    'lifelines' \
     'flake8' \
     'h5py' \
     'ipympl'\
@@ -58,6 +59,7 @@ RUN mamba install --quiet --yes \
     'python-lsp-server' \
     'rope' \
     'scikit-learn' \
+    'scikit-survival' \
     'scipy' \
     'seaborn' \
     'statsmodels' \
