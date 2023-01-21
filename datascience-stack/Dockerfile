@@ -84,7 +84,7 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
 
 RUN mkdir -p "/home/${NB_USER}/.jupyter/lab/user-settings" && \
     fix-permissions "/home/${NB_USER}/.jupyter/lab/user-settings"
-COPY --chown="${NB_UID}:${NB_GID}" user-settings /home/${NB_USER}/.jupyter/lab/user-settings/
+COPY --chown="${NB_UID}:${NB_GID}" user-settings "/home/${NB_USER}/.jupyter/lab/user-settings/"
 
 USER root
 
