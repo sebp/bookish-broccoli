@@ -37,6 +37,7 @@ RUN mamba install --quiet --yes \
     'cython' \
     'dataprep' \
     'dill' \
+    'dtale' \
     'lifelines' \
     'flake8' \
     'h5py' \
