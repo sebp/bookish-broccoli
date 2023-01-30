@@ -38,6 +38,7 @@ RUN mamba install --quiet --yes \
     'cython' \
     'dataprep' \
     'dill' \
+    'docrepr' \
     'dtale' \
     'lifelines' \
     'flake8' \
@@ -48,6 +49,7 @@ RUN mamba install --quiet --yes \
     'jupyter_server>=2.0.0' \
     'jupyterlab-git' \
     'jupyterlab-lsp' \
+    'jupyterlab_pygments' \
     'matplotlib-base' \
     'networkx' \
     'numba' \
