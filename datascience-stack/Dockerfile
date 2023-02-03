@@ -125,6 +125,7 @@ RUN mamba install --quiet --yes \
     'r-htmlwidgets' \
     'r-irkernel' \
     'r-languageserver' \
+    'r-mlr3verse' \
     'r-plotly' \
     'r-ranger' \
     'r-reshape2' \
