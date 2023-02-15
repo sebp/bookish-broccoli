@@ -55,6 +55,7 @@ RUN mamba install --quiet --yes \
     'openpyxl' \
     'pandas' \
     'pandas-profiling' \
+    'papermill' \
     'patsy' \
     'protobuf' \
     'pyflakes' \
@@ -138,6 +139,7 @@ RUN mamba install --quiet --yes \
     'r-shiny' \
     'r-survival' \
     'r-tidyverse' \
+    'radian' \
     'unixodbc' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
