@@ -89,14 +89,6 @@ ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
-RUN mkdir -p "/home/${NB_USER}/.jupyter/lab/user-settings" \
-    "/home/${NB_USER}/.ipython/profile_default" && \
-    fix-permissions "/home/${NB_USER}/.jupyter/lab/user-settings" && \
-    fix-permissions "/home/${NB_USER}/.ipython/profile_default"
-COPY --chown="${NB_UID}:${NB_GID}" user-settings "/home/${NB_USER}/.jupyter/lab/user-settings/"
-RUN echo 'c = get_config()' > "/home/${NB_USER}/.ipython/profile_default/ipython_config.py" && \
-    echo 'c.Completer.use_jedi = False' >> "/home/${NB_USER}/.ipython/profile_default/ipython_config.py"
-
 USER root
 
 # R pre-requisites
