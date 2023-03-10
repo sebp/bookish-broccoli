@@ -71,6 +71,7 @@ RUN mamba install --quiet --yes \
     'statsmodels' \
     'theme-darcula' \
     'widgetsnbextension'\
+    'ydata-profiling' \
     'yapf' \
     'xlrd' && \
     mamba clean --all -f -y && \
