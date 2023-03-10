@@ -42,6 +42,7 @@ RUN mamba install --quiet --yes \
     'lifelines' \
     'flake8' \
     'h5py' \
+    'hydra-core' \
     'ipympl'\
     'ipywidgets' \
     # Temporary fix for: https://github.com/jupyter/docker-stacks/issues/1851
@@ -83,6 +84,9 @@ RUN git clone https://github.com/PAIR-code/facets.git && \
     rm -rf /tmp/facets && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+RUN "${CONDA_DIR}/bin/pip" install --no-cache --no-input \
+    hydra-joblib-launcher
 
 # Import matplotlib the first time to build the font cache.
 ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
