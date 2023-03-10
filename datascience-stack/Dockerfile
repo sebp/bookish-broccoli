@@ -42,6 +42,8 @@ RUN mamba install --quiet --yes \
     'lifelines' \
     'flake8' \
     'h5py' \
+    'holoviews' \
+    'hvplot' \
     'hydra-core' \
     'ipympl'\
     'ipywidgets' \
@@ -54,6 +56,7 @@ RUN mamba install --quiet --yes \
     'numba' \
     'numexpr' \
     'openpyxl' \
+    'panel' \
     'pandas' \
     'pandas-profiling' \
     'papermill' \
