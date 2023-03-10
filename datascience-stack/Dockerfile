@@ -58,6 +58,7 @@ RUN mamba install --quiet --yes \
     'papermill' \
     'patsy' \
     'protobuf' \
+    'pyarrow' \
     'pyflakes' \
     'pytables' \
     'python-lsp-server' \
@@ -104,6 +105,7 @@ USER ${NB_UID}
 # R packages including IRKernel which gets installed globally.
 # r-e1071: dependency of the caret R package
 RUN mamba install --quiet --yes \
+    'r-arrow' \
     'r-base' \
     'r-caret' \
     'r-crayon' \
