@@ -129,6 +129,7 @@ RUN mamba install --quiet --yes \
     'r-irkernel' \
     'r-languageserver' \
     'r-mlr3verse' \
+    'r-patchwork' \
     'r-plotly' \
     'r-ranger' \
     'r-reshape2' \
