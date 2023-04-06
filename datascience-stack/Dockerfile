@@ -64,6 +64,7 @@ RUN mamba install --quiet --yes \
     'protobuf' \
     'pyarrow' \
     'pyflakes' \
+    'pyreadstat' \
     'pytables' \
     'python-lsp-server' \
     'rope' \
