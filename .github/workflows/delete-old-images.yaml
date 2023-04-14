@@ -1,0 +1,19 @@
+name: Delete old Docker images
+
+on:
+  registry_package:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/delete-package-versions@v4
+        with:
+          package-name: bookish-broccoli
+          package-type: container
+          min-versions-to-keep: 5
+          delete-only-untagged-versions: true
