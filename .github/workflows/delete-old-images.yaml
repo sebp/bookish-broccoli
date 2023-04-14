@@ -1,7 +1,9 @@
 name: Delete old Docker images
 
 on:
+  workflow_dispatch:
   registry_package:
+    types: [published, updated]
 
 jobs:
   cleanup:
