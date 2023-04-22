@@ -62,7 +62,7 @@ RUN mamba install --quiet --yes \
     'papermill' \
     'patsy' \
     'protobuf' \
-    'pyarrow' \
+    'pyarrow>=10.0.0,<11' \
     'pyflakes' \
     'pyreadstat' \
     'pytables' \
@@ -114,7 +114,7 @@ USER ${NB_UID}
 # R packages including IRKernel which gets installed globally.
 # r-e1071: dependency of the caret R package
 RUN mamba install --quiet --yes \
-    'r-arrow' \
+    'r-arrow>=10.0.0,<11' \
     'r-base' \
     'r-caret' \
     'r-crayon' \
