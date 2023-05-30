@@ -124,6 +124,7 @@ RUN mamba install --quiet --yes \
     'r-ggplot2' \
     'r-glmnet' \
     'r-grf' \
+    'r-gtsummary' \
     'r-hexbin' \
     'r-htmltools' \
     'r-htmlwidgets' \
