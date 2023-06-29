@@ -61,6 +61,7 @@ RUN mamba install --quiet --yes \
     'pandas-profiling' \
     'papermill' \
     'patsy' \
+    'pingouin' \
     'protobuf' \
     'pyarrow>=10.0.0,<11' \
     'pyflakes' \
