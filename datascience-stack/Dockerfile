@@ -36,7 +36,7 @@ RUN mamba install --quiet --yes \
     'cloudpickle' \
     'conda-forge::blas=*=openblas' \
     'cython' \
-    'dataprep' \
+    #'dataprep' \
     'dill' \
     'dtale' \
     'lifelines' \
