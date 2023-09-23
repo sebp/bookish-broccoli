@@ -123,6 +123,7 @@ RUN mamba install --quiet --yes \
     'r-e1071' \
     'r-forecast' \
     'r-ggplot2' \
+    'r-ggpubr' \
     'r-glmnet' \
     'r-grf' \
     'r-gtsummary' \
