@@ -62,6 +62,7 @@ RUN mamba install --quiet --yes \
     'papermill' \
     'patsy' \
     'pingouin' \
+    'pre-commit' \
     'protobuf' \
     'pyarrow>=10.0.0,<11' \
     'pyflakes' \
@@ -69,6 +70,7 @@ RUN mamba install --quiet --yes \
     'pytables' \
     'python-lsp-server' \
     'rope' \
+    'ruff' \
     'scikit-learn' \
     'scikit-survival' \
     'scipy' \
