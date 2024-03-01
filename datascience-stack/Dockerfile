@@ -1,7 +1,8 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
+ARG REGISTRY=quay.io
 ARG OWNER=jupyter
-ARG BASE_CONTAINER=$OWNER/minimal-notebook
+ARG BASE_CONTAINER=$REGISTRY/$OWNER/minimal-notebook:python-3.11
 FROM $BASE_CONTAINER
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
@@ -47,8 +48,6 @@ RUN mamba install --quiet --yes \
     'hydra-core' \
     'ipympl'\
     'ipywidgets' \
-    # Temporary fix for: https://github.com/jupyter/docker-stacks/issues/1851
-    'jupyter_server>=2.0.0' \
     'jupyterlab-git' \
     'jupyterlab-lsp' \
     'matplotlib-base' \
@@ -57,7 +56,7 @@ RUN mamba install --quiet --yes \
     'numexpr' \
     'openpyxl' \
     'panel' \
-    'pandas>=1.5,<2' \
+    'pandas>=2.0,<3' \
     'pandas-profiling' \
     'papermill' \
     'patsy' \
@@ -108,6 +107,9 @@ USER root
 RUN apt-get update --yes && \
     apt-get install --yes --no-install-recommends \
     fonts-dejavu \
+    unixodbc \
+    unixodbc-dev \
+    r-cran-rodbc \
     gfortran \
     gcc && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
