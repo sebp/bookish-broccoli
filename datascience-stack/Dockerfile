@@ -78,7 +78,6 @@ RUN mamba install --quiet --yes \
     'theme-darcula' \
     'widgetsnbextension'\
     'ydata-profiling' \
-    'yapf' \
     'xlrd' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
