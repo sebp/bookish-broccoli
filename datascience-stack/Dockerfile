@@ -57,7 +57,6 @@ RUN mamba install --quiet --yes \
     'openpyxl' \
     'panel' \
     'pandas>=2.0,<3' \
-    'pandas-profiling' \
     'papermill' \
     'patsy' \
     'pingouin' \
