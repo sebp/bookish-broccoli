@@ -49,6 +49,7 @@ RUN mamba install --quiet --yes \
     'ipywidgets' \
     'jupyterlab-git' \
     'jupyterlab-lsp' \
+    'conda-forge::libarrow=*=*_cpu' \
     'matplotlib-base' \
     'networkx' \
     'numba' \
