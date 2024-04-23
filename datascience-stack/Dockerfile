@@ -61,7 +61,7 @@ RUN mamba install --quiet --yes \
     'pingouin' \
     'pre-commit' \
     'protobuf' \
-    'pyarrow>=10.0.0,<11' \
+    'pyarrow>=10.0.1' \
     'pyreadstat' \
     'pytables' \
     'python-lsp-server' \
