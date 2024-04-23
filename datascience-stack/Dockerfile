@@ -41,7 +41,6 @@ RUN mamba install --quiet --yes \
     'dill' \
     'dtale' \
     'lifelines' \
-    'flake8' \
     'h5py' \
     'holoviews' \
     'hvplot' \
@@ -63,7 +62,6 @@ RUN mamba install --quiet --yes \
     'pre-commit' \
     'protobuf' \
     'pyarrow>=10.0.0,<11' \
-    'pyflakes' \
     'pyreadstat' \
     'pytables' \
     'python-lsp-server' \
