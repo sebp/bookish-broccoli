@@ -123,6 +123,7 @@ RUN mamba install --quiet --yes \
     'r-devtools' \
     'r-e1071' \
     'r-forecast' \
+    'r-furrr' \
     'r-ggplot2' \
     'r-ggpubr' \
     'r-glmnet' \
@@ -146,6 +147,7 @@ RUN mamba install --quiet --yes \
     'r-rstanarm' \
     'r-shiny' \
     'r-survival' \
+    'r-tidymodels' \
     'r-tidyverse' \
     'radian' \
     'unixodbc' && \
