@@ -60,6 +60,7 @@ RUN mamba install --quiet --yes \
     'papermill' \
     'patsy' \
     'pingouin' \
+    'polars' \
     'pre-commit' \
     'protobuf' \
     'pyarrow>=10.0.1' \
