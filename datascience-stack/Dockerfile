@@ -123,6 +123,7 @@ RUN mamba install --quiet --yes \
     'r-crayon' \
     'r-devtools' \
     'r-e1071' \
+    'r-flextable' \
     'r-forecast' \
     'r-furrr' \
     'r-ggplot2' \
