@@ -45,7 +45,7 @@ RUN mamba install --quiet --yes \
     'holoviews' \
     'hvplot' \
     'hydra-core' \
-    'ipympl'\
+    'ipympl' \
     'ipywidgets' \
     'jupyterlab-git' \
     'jupyterlab-lsp' \
@@ -75,14 +75,14 @@ RUN mamba install --quiet --yes \
     'seaborn' \
     'statsmodels' \
     'theme-darcula' \
-    'widgetsnbextension'\
+    'widgetsnbextension' \
     'ydata-profiling' \
     'xlrd' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-# Install facets which does not have a pip or conda package at the moment
+# Install facets package which does not have a `pip` or `conda-forge` package at the moment
 WORKDIR /tmp
 RUN git clone https://github.com/PAIR-code/facets.git && \
     jupyter nbextension install facets/facets-dist/ --sys-prefix && \
@@ -93,9 +93,7 @@ RUN git clone https://github.com/PAIR-code/facets.git && \
 RUN "${CONDA_DIR}/bin/pip" install --no-cache --no-input \
     hydra-joblib-launcher
 
-# Import matplotlib the first time to build the font cache.
-ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
-
+# Import matplotlib the first time to build the font cache
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
