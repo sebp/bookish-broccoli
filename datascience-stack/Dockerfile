@@ -45,8 +45,10 @@ RUN mamba install --quiet --yes \
     'holoviews' \
     'hvplot' \
     'hydra-core' \
+    'ipydatagrid' \
     'ipympl' \
     'ipywidgets' \
+    'itables' \
     'jupyterlab-git' \
     'jupyterlab-lsp' \
     'conda-forge::libarrow=*=*_cpu' \
